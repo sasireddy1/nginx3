@@ -3,11 +3,5 @@
   hosts: webservers
   become: true
   tasks:
-   - name: stop previous version docker
-     shell: docker stop app
-   - name: remove stopped container
-     shell: docker rm -f app 	  
-   - name: remove docker image
-     shell: docker image rm -f sasireddy/new
    - name: create docker image
      shell: docker run -d --name app -p 8090:8080 sasireddy/new
