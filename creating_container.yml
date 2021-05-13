@@ -4,4 +4,4 @@
   become: true
   tasks:
    - name: create docker container
-     shell: docker run -d --name app -p 9009:8080 sasireddy/webtemplate
+     shell: docker run -d --name app -p 9009:80 sasireddy/webtemplate
